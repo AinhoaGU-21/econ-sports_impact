@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'motion/react';
 import { Share2, Bookmark, ArrowUp, Menu, X } from 'lucide-react';
 import { Chart } from './components/Chart';
-import { InteractiveBudget } from './components/InteractiveBudget';
 
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -136,19 +135,6 @@ export default function App() {
               </p>
             </section>
 
-            <motion.div 
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="my-20 p-10 border-l-4 border-primary bg-surface-container"
-            >
-              <p className="font-label text-[10px] uppercase tracking-[0.4em] text-primary font-bold mb-4">
-                Key Finding
-              </p>
-              <p className="font-headline text-3xl text-on-surface/90 leading-tight">
-                Athletics is operating at essentially the same scale as a single mid-sized student fee.
-              </p>
-            </motion.div>
-
             <section className="mt-24">
               <h2 className="font-headline text-4xl font-bold mb-8">Meanwhile, the Rest of the University Has Grown Massive</h2>
               <p className="font-body text-2xl leading-relaxed mb-8">
@@ -187,8 +173,6 @@ export default function App() {
                 src="https://datawrapper.dwcdn.net/o6lJI/1/"
               />
             </section>
-
-            <InteractiveBudget />
 
             <p className="font-body text-2xl leading-relaxed mb-8">
   Removing athletics entirely would barely change the slope of total spending or student services over time. As the charts above show, the trend lines are nearly indistinguishable with or without it.
